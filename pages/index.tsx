@@ -9,7 +9,7 @@ export default function index({ }: Props) {
   return (
     <div className="h-screen bg-white-900 ">
       <Navbar />
-      <div className="flex items-center mx-20 my-20">
+      <div className="flex items-center mx-10 my-20">
         <div className="flex flex-col items-center">
           <h1 className="text-6xl text-purple-700">Good sentence comes here.</h1>
           <p className="my-12 text-gray-600">

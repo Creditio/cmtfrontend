@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from "../../components/DashboardLayout";
-import Button from "../../components/Button";
+import Button from "../../components/button";
 import * as PushAPI from "@pushprotocol/restapi";
 import { useAccount, useSigner } from 'wagmi';
 
@@ -36,8 +36,9 @@ export default function notification({ }: Props) {
         channel: `eip155:80001:${address}`,
         env: 'staging',
       });
+      console.log(channelData);
       if (!channelData) {
-        setError('Please create a channel first');
+        setError('Channel doesn\'t exist');
       }
     })();
   }, []);

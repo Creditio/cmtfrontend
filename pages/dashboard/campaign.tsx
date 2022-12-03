@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Button from "../../components/Button";
+import Link from "next/link";
 
 type Props = {};
 
@@ -45,7 +46,9 @@ export default function campaign({}: Props) {
                 Verify on Supercoin
               </li>
             </ul>
+            <Link href="/dashboard/claim">
             <Button text="Claim Rewards" />
+            </Link>
           </div>
           <div className="flex flex-col my-4">
             <span className="mt-4 font-semibold text-lg my-2">Project</span>
