@@ -1,19 +1,13 @@
 import React from "react";
-import Link from "next/link";
-import Button from "../components/Button";
-import Navbar from "../components/Navbar";
+import Button from "../../components/Button";
+import Layout from "../../components/DashboardLayout";
 
 type Props = {};
 
-export default function create({}: Props) {
+export default function create({ }: Props) {
   return (
-    <div>
-        <Navbar/>
-      <div className="flex">
-        <div className="flex flex-col items-center bg-gray-200 h-[] w-48 ">
-          <span className="mt-8 hover:text-blue-600">Dashboard</span>
-          <span className="mt-4 hover:text-blue-600">Campaign</span>
-        </div>
+    <Layout>
+      <div className="flex mr-20">
         <div className="flex flex-col w-full">
           <div className="flex justify-between mt-8 mx-8">
             <span className="text-2xl font-bold">Create Campaign</span>
@@ -40,8 +34,7 @@ export default function create({}: Props) {
               <div className="mt-12 flex flex-col">
                 <span className="font-semibold">Details:- </span>
                 <textarea
-                  type="textarea"
-                  rows="4"
+                  rows={4}
                   className="border-rose-200 border-2 rounded-lg"
                 />
               </div>
@@ -147,6 +140,6 @@ export default function create({}: Props) {
           </form>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 }
