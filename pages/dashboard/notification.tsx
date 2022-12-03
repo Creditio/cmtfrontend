@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from "../../components/DashboardLayout";
-import Button from "../../components/button";
+import Button from "../../components/Button";
 import * as PushAPI from "@pushprotocol/restapi";
 import { useAccount, useSigner } from 'wagmi';
 
@@ -89,15 +89,19 @@ export default function notification({ }: Props) {
     <Layout>
       <>
         {error && <div className="text-red-500">{error}</div>}
-        <form className='flex flex-col'>
+        <form className='flex flex-col p-16'>
           <span className='font-semibold my-2'>Subject</span>
-          <input type="text" value={subject} className='border-rose-200' onChange={(e) => setSubject(e.target.value)} />
+          <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)}
+            className="my-2 rounded-lg h-10 border-rose-200 border-2" />
           <span className='font-semibold my-2'>Media</span>
-          <input type="text" value={media} className='border-rose-200' onChange={(e) => setMedia(e.target.value)} />
+          <input type="text" value={media} onChange={(e) => setMedia(e.target.value)}
+            className="my-2 rounded-lg h-10 border-rose-200 border-2" />
           <span className='font-semibold my-2'>CTA Link</span>
-          <input type="text" value={link} className='border-rose-200' onChange={(e) => setLink(e.target.value)} />
+          <input type="text" value={link} onChange={(e) => setLink(e.target.value)}
+            className="my-2 rounded-lg h-10 border-rose-200 border-2" />
           <span className='font-semibold my-2'>Notification Message</span>
-          <input type="text" value={message} className='border-rose-200' onChange={(e) => setMessage(e.target.value)} />
+          <input type="text" value={message} onChange={(e) => setMessage(e.target.value)}
+            className="my-2 rounded-lg h-10 border-rose-200 border-2" />
 
           <Button text="Send Notification" onClick={sendNotification} />
         </form>
