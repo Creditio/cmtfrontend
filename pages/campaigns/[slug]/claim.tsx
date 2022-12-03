@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../components/button";
-import Layout from "../../components/DashboardLayout";
+import Button from "../../../components/Button";
+import Layout from "../../../components/DashboardLayout";
 
 type Props = {};
 

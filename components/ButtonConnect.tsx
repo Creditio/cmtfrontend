@@ -306,7 +306,7 @@ const ButtonConnect = ({ text }: Props) => {
     if (address) {
       const { length } = address;
       setShortAddress(
-        `${address.slice(0, 5)}...${address.slice(length - 4, length - 1)}`
+        `${address.slice(0, 5)}...${address.slice(length - 4, length)}`
       );
     }
   }, [address]);

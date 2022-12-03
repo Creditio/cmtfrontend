@@ -1,11 +1,15 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Button from "../../components/Button";
+import Navbar from "../../../components/Navbar";
+import Button from "../../../components/Button";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 type Props = {};
 
-export default function campaign({}: Props) {
+export default function campaign({ }: Props) {
+  const router = useRouter();
+  const { slug } = router.query;
+
   return (
     <div className="flex flex-col items-center">
       <Navbar />
@@ -46,8 +50,8 @@ export default function campaign({}: Props) {
                 Verify on Supercoin
               </li>
             </ul>
-            <Link href="/dashboard/claim">
-            <Button text="Claim Rewards" />
+            <Link href={`/campaigns/${slug}/claim`}>
+              <Button text="Claim Rewards" />
             </Link>
           </div>
           <div className="flex flex-col my-4">
