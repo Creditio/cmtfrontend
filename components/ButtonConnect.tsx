@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAccount, useConnect, useEnsName } from 'wagmi'
 
 type Props = { text: string, };
@@ -56,9 +56,19 @@ const ConnectModal = ({ close, isShown }: ConnectModalProps) => {
 };
 
 const ButtonConnect = ({ text }: Props) => {
-  const { address, isConnected } = useAccount();
+  const { address, isConnected: _isConnected } = useAccount();
   const { data: ensName } = useEnsName({ address });
   const [isModalOpen, setModalOpen] = useState(false);
+
+  const [isConnected, setIsConnected] = useState(false);
+  useEffect(() => {
+    if (_isConnected) {
+      setIsConnected(true);
+    } else {
+      setIsConnected(false);
+    }
+  }, [address]);
+
 
   return <>
     {isConnected ? <div>Connected to {ensName ?? address}</div> :
