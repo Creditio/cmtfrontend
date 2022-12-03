@@ -4,13 +4,13 @@ import Sidebar from './Sidebar';
 
 export default function DashboardLayout({ className, children }: { className?: string, children: JSX.Element }) {
     return (
-        <div className={className}>
+        <div className={(className || "") + "h-screen overflow-y-hidden"}>
             <Navbar />
-            <div className="flex flex-nowrap flex-row">
-                <div className="w-1/6 p-6 bg-slate-300">
+            <div className="flex flex-nowrap flex-row gap-x-12 h-full">
+                <div className="w-1/6">
                     <Sidebar />
                 </div>
-                <div className="flex-grow">
+                <div className="grow">
                     {children}
                 </div>
             </div>
