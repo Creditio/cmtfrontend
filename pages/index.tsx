@@ -1,22 +1,24 @@
 import React from "react";
-import Navbar from "../components/navbar";
-import Button from "../components/button"
+import Link from 'next/link';
+import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 
 type Props = {};
 
-export default function index({}: Props) {
+export default function index({ }: Props) {
   return (
     <div className="h-screen bg-white-900 ">
       <Navbar />
-      <div className="flex items-center mx-16 my-16">
-      <div className="flex flex-col items-center ">
-          <span className="ml-16 text-2xl text-purple-500 font-bold  uppercase tracking-wide leading-loose">
+      <div className="flex items-center mx-20 my-20">
+        <div className="flex flex-col items-center">
+          <h1 className="text-6xl text-purple-700">Good sentence comes here.</h1>
+          <p className="my-12 text-gray-600">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus,
             nobis culpa. Consectetur, earum placeat, sunt fuga veniam deleniti
             magni quaerat quae incidunt libero consequuntur distinctio
             accusantium possimus quia sed facere.
-          </span>
-          <Button text="Launch App"/>
+          </p>
+          <Link href="/dashboard"><Button text="Launch app 🚀" /></Link>
         </div>
         <img src="/main.png" className="w-1/2 rounded-xl" />
       </div>

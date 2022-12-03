@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Button from "../components/button";
-import Navbar from "../components/navbar";
+import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 
 type Props = {};
 
