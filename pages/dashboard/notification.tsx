@@ -87,9 +87,9 @@ export default function notification({ }: Props) {
 
   return (
     <Layout>
-      <>
-        {error && <div className="text-red-500">{error}</div>}
-        <form className='flex flex-col p-16'>
+      <div className='p-16'>
+        <span className="text-4xl font-light">Send Notification</span>
+        <form className='flex mt-8 flex-col'>
           <span className='font-semibold my-2'>Subject</span>
           <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)}
             className="my-2 rounded-lg h-10 border-rose-200 border-2" />
@@ -99,13 +99,15 @@ export default function notification({ }: Props) {
           <span className='font-semibold my-2'>CTA Link</span>
           <input type="text" value={link} onChange={(e) => setLink(e.target.value)}
             className="my-2 rounded-lg h-10 border-rose-200 border-2" />
-          <span className='font-semibold my-2'>Notification Message</span>
+          <span className='font-semibold my-2'>Notification Message <span className='text-red-500 text-sm italic ml-4'>Required</span></span>
           <input type="text" value={message} onChange={(e) => setMessage(e.target.value)}
             className="my-2 rounded-lg h-10 border-rose-200 border-2" />
 
           <Button text="Send Notification" onClick={sendNotification} />
+
+          {error && <div className="text-red-500 mt-4">{error}</div>}
         </form>
-      </>
+      </div>
     </Layout>
   )
 }

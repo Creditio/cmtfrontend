@@ -7,8 +7,8 @@ type Props = {};
 export default function create({ }: Props) {
   return (
     <Layout>
-      <div className="mr-20">
-        <span className="text-2xl mb-12 font-bold">Create Campaign</span>
+      <div className="p-16">
+        <span className="text-4xl mb-12 font-light">Create Campaign</span>
         <form>
           <div className="mt-8 flex flex-col">
             <div className="my-2 flex flex-col">
