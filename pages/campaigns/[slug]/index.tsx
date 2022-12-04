@@ -52,7 +52,7 @@ export default function campaign({}: Props) {
                 Verify on Supercoin
               </li>
             </ul>
-            <Link href={`/campaigns/${slug}/claim`}>
+            <Link href={`/campaigns/${slug}/claim-discord`}>
               <Button text="Claim Rewards" />
             </Link>
           </div>
@@ -63,12 +63,8 @@ export default function campaign({}: Props) {
               <span className="mx-4 font-bold text-lg">Eth India</span>
             </div>
             <span className="font-bold text-md my-4">Campaign Period</span>
-            <span className="font-light text-gray-700 my-1">
-              From:Thu,November 17,2022
-            </span>
-            <span className="font-light text-gray-700 my-1">
-              End:Thu,December 17,2022
-            </span>
+            <span className="font-light text-gray-700 my-1">From: Thu,November 17,2022</span>
+            <span className="font-light text-gray-700 my-1">End: Thu,December 17,2022</span>
           </div>
         </div>
       </div>
