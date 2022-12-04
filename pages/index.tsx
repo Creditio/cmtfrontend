@@ -7,7 +7,7 @@ type Props = {};
 
 export default function index({ }: Props) {
   return (
-    <div className="h-screen bg-white-900 ">
+    <div className="h-screen bg-white-900 overflow-y-hidden">
       <Navbar />
       <div className="flex items-center mx-10 my-20">
         <div className="flex flex-col items-center w-1/2">
@@ -16,6 +16,9 @@ export default function index({ }: Props) {
             Proof of community with ZK proof
           </p>
           <Link href="/dashboard"><Button text="Launch app 🚀" /></Link>
+        </div>
+        <div>
+          <img src="/panda.png"/>
         </div>
       </div>
     </div>
